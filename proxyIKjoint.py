@@ -34,7 +34,9 @@ class proxyIKjoint(object):
 
         #display new window
         cmds.showWindow()
-
+'''
+Made by Linqi "Lyne" Sun (perennisln@outlook.com/lsa172@sfu.ca)
+'''
 
     #define make proxy function
     def make_proxies(self, *args):

@@ -73,6 +73,7 @@ class proxyIKjoint(object):
         self.ikHandleCtl = cmds.circle(nr=(1, 0, 0), c=handleCtlLoc, r=1.2, n=self.proxName_3+'_ctl')[0]
         cmds.matchTransform(self.ikHandleCtl, self.proxName_3+'_jnt', piv=True)
         cmds.parent(self.proxName_3+'_ikHandle', self.ikHandleCtl)
+        cmds.orientConstraint(self.ikHandleCtl, self.proxName_3+'_jnt')
         #create ikPoleVector ctl and poleVectorConstrain the ikHandle
         pvcLoc = cmds.xform(self.prox_4, q=True, t=True, ws=True)
         self.pvcCtl = cmds.circle(nr=(0, 0, 1), c=pvcLoc, r=1.2, n=self.proxName_2+'_poleVector_ctl')[0]
